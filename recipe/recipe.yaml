@@ -3,7 +3,7 @@ schema_version: 1
 context:
   python_min: "3.11"
   name: openfe-analysis
-  version: "0.5.0"
+  version: "0.6.0"
 
 package:
   name: ${{ name|lower }}
@@ -11,10 +11,10 @@ package:
 
 source:
   url: https://github.com/OpenFreeEnergy/openfe_analysis/archive/refs/tags/v${{ version }}.tar.gz
-  sha256: bd8906a03b5452a497dffd5de820a1dce5efe1edda9075f7f632653405782e78
+  sha256: fa8f90c05584d0dd3e7c4b7d446abe59bb1fcf33403443118eee478378822985
 
 build:
-  number: 2
+  number: 0
   noarch: python
   script: SETUPTOOLS_SCM_PRETEND_VERSION=${{ version }} ${{ PYTHON }} -m pip install . -vv --no-deps
 
